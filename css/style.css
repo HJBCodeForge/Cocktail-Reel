@@ -33,20 +33,23 @@ img{
         display: flex;
         overflow: hidden;
         width: 300px; /* set width to match your slide width */
+        height: 600px;
         transition: transform 0.3s ease-in-out; /* add smooth transition here */
+        position: relative; /* Create a positioning context */
       }
 
       /* Each slide is a flex item with a fixed minimum width */
       .slide {
         position: relative; /* Establish a positioning context */
+        z-index: 1; 
         width: 300px;       /* Force a fixed width */
         flex-shrink: 0;     /* Prevent them from shrinking */
-        padding: 0;         /* Remove padding for testing */
-        margin: 0; 
+        padding: 10px;         /* Remove padding for testing */
         box-sizing: border-box;
         text-align: center;
         /* Optionally, add a background for debugging */
-        border: 1px solid red;
+        border: 1px solid rgb(0, 0, 0);
+        background: #f0f0f0;
       }
 
 

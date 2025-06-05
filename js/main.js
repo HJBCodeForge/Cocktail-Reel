@@ -81,7 +81,6 @@ function updateCarousel() {
     const slideWidth = slides.length > 0 ? slides[0].offsetWidth : 0;
     const offset = -currentIndex * slideWidth;
     carouselContainer.style.transform = `translateX(${offset}px)`;
-    console.log('Slide bounding rect width:', slides[0].getBoundingClientRect().width);
 }
 
 
