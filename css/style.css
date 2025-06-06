@@ -1,68 +1,61 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
-*{
-  box-sizing: border-box;
-}
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-img{
-  display: block;
-  margin: 0 auto;
-  height: 250px;
-}
-
-/******************************************
-/* CAROUSEL STYLES
-/*******************************************/
- /* The wrapper centers the carousel and places the nav buttons to the sides */
-      #carousel-wrapper {
-        width: 400px;
-        margin: 20px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* The container hides overflowing content and shows one slide at a time */
-      #carousel-container {
-        display: flex;
-        overflow: hidden;
-        width: 300px; /* set width to match your slide width */
-        height: 600px;
-        transition: transform 0.3s ease-in-out; /* add smooth transition here */
-        position: relative; /* Create a positioning context */
-      }
-
-      /* Each slide is a flex item with a fixed minimum width */
-      .slide {
-        position: relative; /* Establish a positioning context */
-        z-index: 1; 
-        width: 300px;       /* Force a fixed width */
-        flex-shrink: 0;     /* Prevent them from shrinking */
-        padding: 10px;         /* Remove padding for testing */
-        box-sizing: border-box;
-        text-align: center;
-        /* Optionally, add a background for debugging */
-        border: 1px solid rgb(0, 0, 0);
-        background: #f0f0f0;
-      }
-
-
-      /* Ensure images fit well in the slide */
-      .slide img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      }
-
-
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+    /* Container for the slider */
+    #slider-container {
+      position: relative;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+    }
+    /* Wrapper for slides */
+    #slides {
+      position: relative;
+      overflow: hidden;
+    }
+    /* Each slide (hidden by default) */
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 10px;
+    }
+    /* Show only the active slide */
+    .slide.active {
+      display: block;
+    }
+    /* Image styling */
+    .slide img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    /* Slide title */
+    .slide h2 {
+      margin: 10px 0 5px;
+      font-size: 1.5em;
+    }
+    /* Slide instructions text */
+    .slide p {
+      font-size: 1em;
+      color: #333;
+    }
+    /* Navigation button styling */
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+    /* Position left arrow */
+    #prev {
+      left: 0;
+    }
+    /* Position right arrow */
+    #next {
+      right: 0;
+    }

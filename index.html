@@ -15,14 +15,16 @@
 
 		<h1>Which Cocktail?</h1>
 		<input type="text" placeholder="Enter cocktail name">
-		<button type="button" name="button">Get Cocktail</button>
+		<button type="button" onclick="getCocktail()">Get Cocktail</button>
 
-		   <!-- Carousel wrapper with navigation buttons -->
-		<div id="carousel-wrapper">
-			<button id="prev">Prev</button>
-			<div id="carousel-container"></div>
-			<button id="next">Next</button>
-		</div>
+			<!-- Slider container -->
+			<div id="slider-container">
+				<!-- Slides will be inserted here -->
+				<div id="slides"></div>
+			</div>
+			<!-- Left and right navigation arrows -->
+			<button id="prev" class="nav-button">&#10094;</button>
+			<button id="next" class="nav-button">&#10095;</button>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
